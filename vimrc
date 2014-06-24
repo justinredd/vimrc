@@ -208,6 +208,8 @@ augroup json_autocmd
   autocmd FileType json set foldmethod=syntax 
 augroup END 
 
+au BufRead,BufNewFile *.gradle set filetype=groovy
+
 " Only do this part when compiled with support for autocommands.
 if has("autocmd")
 
