@@ -11,12 +11,6 @@ $ make install
 
 Then marvel at what's up.
 
-## Install fonts
-
-You need the inconsolata patched for powerline:
-
-https://gist.github.com/1595572
-
 ## Important configuration stuff
 
 Leader is mapped to ','
@@ -27,29 +21,6 @@ The current list is maintained in the vimrc through vundle. Check out vimrc.
 
 ## Commands
 
-### Git
-```
-[:GitAdd <file>]       git-add <file> or current file if not specified.
-[:GitCommit <args>]    git-commit.
-[:GitStatus]           Show git-status of current file or repository.
-[:GitLog]              Show git-log of current file or repository.
-[:GitCheckout <args>]  git-checkout. Completes git commits.
-[:GitDiff <args>]      git-diff. Completes git commits.
-[:GitPull <args>]      git-pull.
-[:GitPullRebase]       git-pull --rebase.
-[:GitPush <args>]      git-push. Defaults to +git push origin <current-branch>+.
-[:GitCatFile <args>]   git-cat-file.
-[:Git <args>]          Does any git command.
-[:GitVimDiffMerge]     Experimental. Call this command on unmerged file to enter vimdiff mode.
-[:GitVimDiffMergeDone] Call this command after merging.
-```
-### Ack
-```
-[:Ack] Takes options, a pattern, and a directory.  Shows results in a quickbuffer.
-[:AckAdd] Like Ack + grepadd - adds to, rather than replaces, the quickbuffer.
-[:LAck] Ack + lgrep - opens in location-list
-[:LAckAdd] Appends to the location list
-```
 ### Tags
 ```
 [:TlistOpen] Opens the tag list window
@@ -85,19 +56,6 @@ examples.  An asterisk (*) is used to denote the cursor position.
 [,cb] = Comment and align on both sides
 [,cu] = Uncomment the selected lines
 ```
-### Gist
-```
-[:Gist] = post the whole text to gist
-[:'<,'>Gist] = post the selected text to gist
-[:Gist -p] = post wholet ext to gist with private
-[:Gist -a] = post the whole text to gist with anonymous
-[:Gist -e] = Edit the gist
-[:Gist -e foo.js] = Edit the gist with the name 'foo.js'
-[:Gist XXXXX] = Get gist
-[:Gist -c XXXXX] = Get gist and put to clipboard
-[:Gist -l] = List my gists
-[:Gist -la] = List gists from all
-```
 ### Textile
 ```
 [,rp] = :TextilePreview - render textile to a temp file, open in browser
@@ -108,19 +66,6 @@ examples.  An asterisk (*) is used to denote the cursor position.
 ```
 [,d] = Toggle NERDtree
 [,t] = Command-T
-[,b] = FuzzyBufferFinder
 [,l] = TListToggle 
-[,gd] :GitDiff
-[,gD] :GitDiff --cached
-[,gs] :GitStatus
-[,gl] :GitLog
-[,ga] :GitAdd
-[,gA] :GitAdd <cfile>
-[,gc] :GitCommit
 ```
-### In git-status buffer
-```
-[<Enter>]    :GitAdd <cfile>
-```
-
 
