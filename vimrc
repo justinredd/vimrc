@@ -1,7 +1,6 @@
 set nocompatible
-filetype off
 
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
 
 " let Vundle manage Vundle
@@ -12,18 +11,11 @@ Bundle 'gmarik/vundle'
 "
 " original repos on github
 Bundle 'scrooloose/nerdtree'
-Bundle 'taglist.vim'
-Bundle 'kien/ctrlp.vim'
-Bundle 'VimClojure'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-markdown'
-Bundle 'tpope/vim-haml'
-Bundle 'tpope/vim-rails'
 Bundle 'majutsushi/tagbar'
 Bundle 'vim-ruby/vim-ruby'
-Bundle 'CSApprox'
-Bundle 'timcharper/textile.vim'
-Bundle 'jimenezrick/vimerl'
+Bundle 'godlygeek/csapprox'
 Bundle 'myusuf3/numbers.vim'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'JSON.vim'
@@ -88,9 +80,6 @@ let Tlist_Show_Menu=1
 let Tlist_Enable_Fold_Column=0
 let g:tagbar_autofocus = 1
 
-let g:vimclojure#ParenRainbow = 1
-let g:vimclojure#HighlightBuiltins = 1
-let g:vimclojure#WantNailgun = 1
 let python_highlight_all = 1
 
 " let g:Powerline_symbols = 'fancy'
@@ -112,44 +101,11 @@ let g:airline_symbols.paste = 'Þ'
 let g:airline_symbols.paste = '∥'
 let g:airline_symbols.whitespace = 'Ξ'
 
-map <right> :bn<cr>
-map <left> :bp<cr>
-map <leader>tn :tabnew<cr>
-map <leader>te :tabedit
-map <leader>tc :tabclose<cr>
-map <leader>tm :tabmove
-
-map <leader>t :CtrlP<CR>
-map <leader>b :CtrlPBuffer<CR>
-map <leader>d :execute 'NERDTreeToggle ' . getcwd()<CR>
-map <leader>j :TagbarTogggle<CR>
-
-" Hold command to do the g for softwrap
-vmap <D-j> gj
-vmap <D-k> gk
-vmap <D-4> g$
-vmap <D-6> g^
-vmap <D-0> g^
-nmap <D-j> gj
-nmap <D-k> gk
-nmap <D-4> g$
-nmap <D-6> g^
-nmap <D-0> g^
-
-" ctrlp
-let g:ctrlp_working_path_mode = 2
-let g:ctrlp_switch_buffer = 0
-let g:ctrlp_max_files = 20000
-
-
 
 " CSApprox
 if (&term == 'xterm')
   set t_Co=256
 endif
-
-" Suppress lustyjuggler warnings
-let g:LustyJugglerSuppressRubyWarning = 1
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
