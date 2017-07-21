@@ -150,6 +150,7 @@ autocmd BufRead *\.txt map j gj
 autocmd BufRead *\.txt map k gk
 autocmd BufRead *\.txt setlocal smartindent
 autocmd BufRead *\.txt setlocal spell spelllang=en_us
+autocmd BufRead *\.md  setlocal spell spelllang=en_us
 
 au! BufRead,BufNewFile *.json set filetype=json
 augroup json_autocmd
