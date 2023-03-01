@@ -179,7 +179,9 @@ if has("autocmd")
     au!
 
     autocmd FileType make     set noexpandtab
-    autocmd FileType python   set noexpandtab
+    autocmd FileType python   set softtabstop=2
+    autocmd FileType python   set shiftwidth=2
+    autocmd FileType python   set tabstop=2
 
 
     " For all text files set 'textwidth' to 78 characters.
